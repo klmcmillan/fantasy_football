@@ -44,7 +44,7 @@ After changes to the ```main()``` function are made, run the file, and player da
 
 ### slots_table.py
 
-The following lines from the ``main()``` function need to be changed:
+The following lines from the ```main()``` function need to be changed:
 
 ```python
 ff_db = 'DATABASE_NAME.sqlite'
