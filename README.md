@@ -11,7 +11,7 @@ The following files are used to scrape ESPN Fantasy Football league data:
 
 These files can be executed in any order, and each will write data to a user-specified database. Instructions for running these files are described below.
 
-## matchups_table.py<a name="matchups"></a>
+## <a name="matchups"></a>matchups_table.py
 
 First, the following lines from the ```main()``` function need to be changed:
 
