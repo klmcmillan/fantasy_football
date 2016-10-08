@@ -36,4 +36,34 @@ season_id = 0000
 weeks = [1, 2, 3, ...]
 ```
 
+```ff_db```, ```league_id``` and ```season_id``` are described [above](#matchups). ```weeks``` is a list of matchup weeks to be scraped. This allows you to scrape data from the league as the season progresses.
+
+After changes to the ```main()``` function are made, run the file, and player data from the matchup weeks of interest will be committed to the user-specified database.
+
+## slots_table.py
+
+The following lines from the ``main()``` function need to be changed:
+
+```python
+ff_db = 'DATABASE_NAME.sqlite'
+league_id = 000000
+season_id = 0000
+```
+
 ```ff_db```, ```league_id``` and ```season_id``` are described [above](#matchups).
+
+After changes to the ```main()``` function are made, run the file, and roster settings for the league will be committed to the user-specified database.
+
+## teams_table.py
+
+The following lines from the ```main()``` function need to be changed:
+
+```python
+ff_db = 'DATABASE_NAME.sqlite'
+league_id = 000000
+season_id = 0000
+```
+
+```ff_db```, ```league_id``` and ```season_id``` are described [above](#matchups).
+
+After changes to the ```main()``` function are made, run the file, and team owner information for the league will be committed to the user-specified database.
