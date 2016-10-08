@@ -2,6 +2,8 @@
 
 # How this works
 
+## Scraping data
+
 The following files are used to scrape ESPN Fantasy Football league data:
 
 1. matchups_table.py
@@ -11,7 +13,7 @@ The following files are used to scrape ESPN Fantasy Football league data:
 
 These files can be executed in any order, and each will write data to a user-specified database. Instructions for running these files are described below.
 
-## <a name="matchups"></a>matchups_table.py
+### <a name="matchups"></a>matchups_table.py
 
 First, the following lines from the ```main()``` function need to be changed:
 
@@ -25,7 +27,7 @@ season_id = 0000
 
 After changes to the ```main()``` function are made, simply run the file, and weekly matchup data will be committed to the user-specified database.
 
-## players_table.py
+### players_table.py
 
 The following lines from the ```main()``` function need to be changed:
 
@@ -40,7 +42,7 @@ weeks = [1, 2, 3, ...]
 
 After changes to the ```main()``` function are made, run the file, and player data from the matchup weeks of interest will be committed to the user-specified database.
 
-## slots_table.py
+### slots_table.py
 
 The following lines from the ``main()``` function need to be changed:
 
@@ -54,7 +56,7 @@ season_id = 0000
 
 After changes to the ```main()``` function are made, run the file, and roster settings for the league will be committed to the user-specified database.
 
-## teams_table.py
+### teams_table.py
 
 The following lines from the ```main()``` function need to be changed:
 
@@ -67,3 +69,7 @@ season_id = 0000
 ```ff_db```, ```league_id``` and ```season_id``` are described [above](#matchups).
 
 After changes to the ```main()``` function are made, run the file, and team owner information for the league will be committed to the user-specified database.
+
+## Analyzing scores
+
+After a database has been created with league data scraped from the web, the following files can be used to analyze scores from you league:
