@@ -23,7 +23,7 @@ league_id = 000000
 season_id = 0000
 ```
 
-```ff_db``` is the name of the database to which data will be saved. ```league_id``` is id number of the ESPN Fantasy Football league that is to be scraped. Even if you aren't part of an ESPN Fantasy Football league, you can still use these scripts. Any league that has been set as "open to the public" can be scraped. Just play around with six digit numbers until you find one that works! ```season_id``` is the year of the fantasy football season. This code has been succesffully tested all the way back to the 2012 season. That being said, some data, such as weekly player projections and the scores for players on the bench, can only be parsed for the current season.
+```ff_db``` is the name of the database to which data will be saved. ```league_id``` is the id number of the ESPN Fantasy Football league that is to be scraped. Even if you aren't part of an ESPN Fantasy Football league, you can still use these scripts. Any league that has been set as "open to the public" can be scraped. Just play around with six digit numbers until you find one that works! ```season_id``` is the year of the fantasy football season. This code has been succesffully tested all the way back to the 2012 season. That being said, some data, such as weekly player projections and the scores for players on the bench, can only be parsed for the current season.
 
 After changes to the ```main()``` function are made, simply run the file, and weekly matchup data will be committed to the user-specified database.
 
@@ -76,9 +76,22 @@ After a database has been created with league data scraped from the web, the fol
 
 1. score_analysis.py
 
-Score analysis functions from the proceeding files are described below.
+Usage instructions and descriptions of functions from the preceeding files are provided below.
 
 ### score_analysis.py
+
+In order to use the file as is, the following lines from the ```main()``` function need to be changed:
+
+```python
+ff_db = 'DATABASE_NAME.sqlite'
+league_id = 000000
+season_id = 0000
+weeks = [1, 2, 3, ...]
+```
+
+```ff_db``` is the name of the database from which data will be read. ```league_id``` is the id number of the ESPN Fantasy Football league. ```season_id``` is the year of the fantasy football season. ```weeks``` is a list of matchup weeks from which scores are to be analyzed. 
+
+After changes to the ```main()``` function are made, simply run the file, and a set of images and spreadsheets will be generated.
 
 #### make_standings_tables
 
