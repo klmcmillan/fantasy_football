@@ -36,4 +36,4 @@ season_id = 0000
 weeks = [1, 2, 3, ...]
 ```
 
-```ff_db```, ```league_id``` and ```season_id``` are described [above](#matchups_table.py).
+```ff_db```, ```league_id``` and ```season_id``` are described [above](##matchups_table.py).
