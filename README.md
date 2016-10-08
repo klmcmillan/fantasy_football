@@ -92,5 +92,24 @@ The "actual standings" table is the league standings table based on matchups dec
 
 #### plot_proj_accuracy
 
-This function will provide a plot of the actual scores vs. the ESPN projected scores for the league for a given set of matchup weeks. An example is provided below:
+This function will provide a plot of the actual scores vs. the ESPN projected scores for the league for a given set of matchup weeks. An example is provided below. In this example, data points to the left of the unity line indicate that the ESPN projected score is greater than the actual score. Data points to the right of the unity line indicate the actual scores beat the ESPN projections.
 
+![Projection Accuracy](https://github.com/klmcmillan/fantasy_football/blob/master/examples/proj_accuracy_weeks_1-4.png)
+
+#### plot_manager_efficiency
+
+This function will provide a plot of the actual scores vs. best possible scores (optimal combination of players from starters and bench) for the league for a given set of matchup weeks. An example is provided below. In this example, data points closer to the unity line indicate the manager set a more efficient lineup (didn't leave too many points on the bench). Data points further away from the unity line indicate the manager left a lot of points on the bench.
+
+![Manager Efficiency](https://github.com/klmcmillan/fantasy_football/blob/master/examples/manager_efficiency_weeks_1-4.png)
+
+#### plot_absolute_proj_error
+
+This function will provide a bar plot of the absolute difference between the ESPN projected score and actual score for each player from the starting lineup and bench for the league during a given week of matchups. Above each bar is the player's name, postion and a symbol to indicate if they were played as a starter. An example is provided below.
+
+![Absolute Projection Error](https://github.com/klmcmillan/fantasy_football/blob/master/examples/abs_error_week_4.png)
+
+#### plot_relative_proj_error
+
+This function will provide a bar plot of the realative difference between the ESPN projected score and actual score for each player from the starting lineup and bench for the league during a given week of matchups. Above each bar is the player's name, postion and a symbol to indicate if they were played as a starter.
+
+![Relative Projection Error](https://github.com/klmcmillan/fantasy_football/blob/master/examples/rel_error_week_4.png)
