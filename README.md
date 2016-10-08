@@ -72,4 +72,25 @@ After changes to the ```main()``` function are made, run the file, and team owne
 
 ## Analyzing scores
 
-After a database has been created with league data scraped from the web, the following files can be used to analyze scores from you league:
+After a database has been created with league data scraped from the web, the following files can be used to analyze scores from your league:
+
+1. score_analysis.py
+
+Score analysis functions from the proceeding files are described below.
+
+### score_analysis.py
+
+#### make_standings_tables
+
+This function will create the following league standings tables for a given set of matchup weeks:
+
+1. Actual standings
+2. Projected standings
+3. Best standings
+
+The "actual standings" table is the league standings table based on matchups decided by the actual week-to-week scores. This standings table should match the standings table reported by ESPN. The "projected standings" table is the hypothetical league standings if matchups were decided by the weekly projected scores. The "best standings" table is the hypothetical league standings if matchups were decided by scores based on the optimal combination of players from starters and bench each week. By looking at these different league standings scenarios, you can get a sense of who trusted the projection too much and who left too many points on their bench each week.
+
+#### plot_proj_accuracy
+
+This function will provide a plot of the actual scores vs. the ESPN projected scores for the league for a given set of matchup weeks. An example is provided below:
+
