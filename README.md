@@ -146,7 +146,7 @@ position_filter=None
 slot_filter=None
 ```
 
-```ff_db``` is the name of the database from which data will be read. ```position_filter``` is used to filter the data by position. ```slot_filter``` is used to filter the data by starter/bench designation. If you want to evaulate all player data from your league, keep ```position_filter``` and ```slot_filter``` equal to ```None```. Note that there is already a filter in the code to eliminate players with projected scores of 0 (i.e. injured players of players on a BYE week).
+```ff_db``` is the name of the database from which data will be read. ```position_filter``` is used to filter the data by position. ```slot_filter``` is used to filter the data by starter/bench designation. If you want to evaulate all player data from your league, keep ```position_filter``` and ```slot_filter``` equal to ```None```. Note that there is already a filter in the code to eliminate players with projected scores of 0 (i.e. injured players or players on a BYE week).
 
 After changes to the ```main()``` function are made, simply run the file, and an image will be generated.
 
