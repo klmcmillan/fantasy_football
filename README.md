@@ -75,6 +75,7 @@ After changes to the ```main()``` function are made, run the file, and team owne
 After a database has been created with league data scraped from the web, the following files can be used to analyze scores from your league:
 
 1. score_analysis.py
+2. espn_projection_bias.py
 
 Usage instructions and descriptions of functions from the preceeding files are provided below.
 
@@ -126,3 +127,27 @@ This function will provide a bar plot of the absolute difference between the ESP
 This function will provide a bar plot of the realative difference between the ESPN projected score and actual score for each player from the starting lineup and bench for the league during a given week of matchups. Above each bar is the player's name, postion and a symbol to indicate if they were played as a starter.
 
 ![Relative Projection Error](https://github.com/klmcmillan/fantasy_football/blob/master/examples/rel_error_week_4.png)
+
+### espn_projection_bias.py
+
+A question that usually comes up in fantasy football is "How accurate are the player projections?". Most people rely on these projections to set their lineups, so it's an important question to answer. Since we have scraped the projected and actual scores for each player, we can test if there is any statistically significant bias in the projections (over-projected or under-projected).
+
+The file espn_projection_bias.py was written to help answer the question of bias. The output of the file is a figure that shows the following: (1) distribution of relative projection errors, (2) distribution of the mean relative projection errors and (3) distriubtion of the median realtive projections errors. Distributions of the mean and median relative projection errors are based on bootstrap sampling of the relative projection errors. An efficient bootstrap sampling function is included in this file.
+
+In order to test for statistical significance, 95% confidence intervals are calcualted for the mean and median relative projection errors. In each case, if zero were to fall within the 95% confidence interval, we would say that ESPN’s projections are indistinguishable from zero. If you think fantasy football scoring is normally distributed, you could use the mean as an estimate of the center of the distribution. If you think the scoring may not be normally distributed, you may think the median is a better measure of the center of the distribution. It really depends on how the data is distributed.
+
+The file also includes filters so you can test if there is any statistically significant bias in the projections for specific positions (e.g. 'QB', 'WR', etc.) or in the projections of starters only (defualt is to collectively consider starters and bench players).
+
+In order to use the file as is, the following lines from the ```main()``` function need to be changed:
+
+```python
+ff_db = 'DATABASE_NAME.sqlite'
+position_filter=None
+slot_filter=None
+```
+
+```ff_db``` is the name of the database from which data will be read. ```position_filter``` is used to filter the data by position. ```slot_filter``` is used to filter the data by starter/bench designation. 
+
+After changes to the ```main()``` function are made, simply run the file, and an image will be generated.
+
+![ESPN Projection Bias](https://github.com/klmcmillan/fantasy_football/blob/master/examples/espn_projection_bias.png)
