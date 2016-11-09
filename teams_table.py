@@ -59,7 +59,7 @@ def parse_teams(team_id, team_soup):
     return teams
 
 
-def write_players_to_db(ff_db, teams):
+def write_teams_to_db(ff_db, teams):
     """
     Write team data to database.
     """
@@ -116,7 +116,7 @@ def main():
     for team_id in team_ids:
         team_soup = load_clubhouse_page(league_id, team_id, season_id)
         teams = parse_teams(team_id, team_soup)
-        write_players_to_db(ff_db, teams)
+        write_teams_to_db(ff_db, teams)
 
 
 if __name__ == '__main__':
